@@ -1,0 +1,79 @@
+/* Saída Fácil – visual inspirado no estilo institucional azul e branco da educação (SESI) */
+:root{--pri:#0a4da2;--pri-d:#062f66;--pri-l:#eaf1fb;--acc:#e30613;--bg:#f2f5fa;--card:#fff;--tx:#1a2b45;--mut:#5d6b82;--bd:#d9e1ee;
+--ok:#177a45;--okb:#e0f4e8;--wa:#8a5a00;--wab:#fff3d6;--no:#b3261e;--nob:#fde5e3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.5}
+.hide{display:none!important}
+
+/* Barra superior */
+.topbar{background:var(--pri-d);color:#fff;border-bottom:4px solid var(--acc)}
+.topbar .in{max-width:1000px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;border-radius:10px;background:#fff;color:var(--pri);display:grid;place-items:center;font-size:1.3rem}
+.brand b{display:block;font-size:1.2rem;letter-spacing:.3px;line-height:1.2}
+.brand small{opacity:.8;font-size:.82rem}
+.wrap{max-width:1000px;margin:0 auto;padding:20px}
+footer{text-align:center;color:var(--mut);font-size:.82rem;padding:8px 0 24px}
+
+/* Textos e formulários */
+h1{font-size:1.5rem;margin:0}h2{font-size:1.15rem;margin:0 0 12px;color:var(--pri-d)}
+p{color:var(--mut);margin:0 0 12px}
+label{display:block;font-weight:600;font-size:.88rem;margin:14px 0 5px;color:var(--pri-d)}
+input,select,textarea{width:100%;padding:11px 14px;border:1.5px solid var(--bd);border-radius:10px;background:#fff;color:var(--tx);font:inherit}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--pri);box-shadow:0 0 0 3px rgba(10,77,162,.15)}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:11px 22px;background:var(--pri);color:#fff;font-weight:600;transition:background .15s}
+button:hover{background:var(--pri-d)}
+button.sec{background:#fff;color:var(--pri);border:1.5px solid var(--pri)}
+button.sec:hover{background:var(--pri-l)}
+.full{width:100%;margin-top:16px}
+
+/* Cartões */
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px;margin-bottom:16px;box-shadow:0 2px 10px rgba(6,47,102,.06)}
+
+/* Tela de login */
+.login{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:stretch;margin-top:4vh}
+.login-hero{background:linear-gradient(135deg,var(--pri) 0%,var(--pri-d) 100%);color:#fff;border-radius:16px;padding:36px 32px;display:flex;flex-direction:column;justify-content:center}
+.login-hero h2{color:#fff;font-size:1.7rem;line-height:1.25;margin-bottom:12px}
+.login-hero p{color:rgba(255,255,255,.88)}
+.login-hero ul{margin:8px 0 0;padding:0;list-style:none}
+.login-hero li{padding:6px 0 6px 28px;position:relative}
+.login-hero li::before{content:"✓";position:absolute;left:0;color:#fff;background:var(--acc);width:20px;height:20px;border-radius:50%;font-size:.75rem;display:grid;place-items:center;top:9px}
+.login-card{margin:0}
+
+/* Faixa de boas-vindas */
+.welcome{background:linear-gradient(120deg,var(--pri),var(--pri-d));color:#fff;border-radius:16px;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.welcome .mut{color:rgba(255,255,255,.8);font-size:.88rem}
+.welcome .sec{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.welcome .sec:hover{background:rgba(255,255,255,.15)}
+
+/* Abas */
+nav{display:flex;gap:4px;border-bottom:2px solid var(--bd);margin-bottom:18px;flex-wrap:wrap}
+nav button{background:none;color:var(--mut);border-radius:0;padding:12px 20px;border-bottom:3px solid transparent;margin-bottom:-2px}
+nav button:hover{background:var(--pri-l);color:var(--pri)}
+nav button.on{color:var(--pri);border-bottom-color:var(--acc)}
+
+/* Tipos de pedido */
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.opt{border:2px solid var(--bd);border-radius:14px;padding:16px 12px;cursor:pointer;text-align:center;font-weight:700;color:var(--pri-d);background:#fff;transition:all .15s}
+.opt:hover{border-color:var(--pri)}
+.opt.on{border-color:var(--pri);background:var(--pri-l);box-shadow:0 0 0 3px rgba(10,77,162,.12)}
+.opt small{display:block;color:var(--mut);font-weight:400;margin-top:2px}
+
+/* Listas e status */
+.item{border-top:1px solid var(--bd);padding:14px 0}.item:first-child{border-top:0}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.badge{font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:99px}
+.Aprovado{background:var(--okb);color:var(--ok)}.Pendente{background:var(--wab);color:var(--wa)}.Recusado{background:var(--nob);color:var(--no)}
+.msg{padding:12px 14px;border-radius:10px;background:var(--okb);color:var(--ok);margin-top:14px;font-weight:600}
+.err{background:var(--nob);color:var(--no)}
+.mut{color:var(--mut);font-size:.88rem}
+.btns{display:flex;gap:8px;margin-top:10px}.btns button{flex:1}
+.b-ok{background:var(--ok)}.b-ok:hover{background:#0f5c33}
+.b-no{background:var(--no)}.b-no:hover{background:#8c1c16}
+
+@media (max-width:760px){
+  .login{grid-template-columns:1fr;margin-top:0}
+  .login-hero{padding:24px}
+  .welcome{flex-direction:column;align-items:flex-start}
+  nav button{flex:1;padding:12px 8px}
+}

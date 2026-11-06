@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saída Fácil – Portal da Escola</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <div class="logo">🏫</div>
+  <div class="brand"><b>Saída Fácil</b><small>Portal de saídas e permanência escolar</small></div>
+</div></div>
+
+<div class="wrap">
+
+<section id="login" class="login">
+  <div class="login-hero">
+    <h2>Saídas e permanência no contraturno, de forma simples e organizada</h2>
+    <p>Faça seu pedido pelo site e acompanhe a resposta da coordenação em tempo real.</p>
+    <ul>
+      <li>Peça para sair ou para sair e voltar</li>
+      <li>Solicite ficar no contraturno</li>
+      <li>Veja o histórico dos seus pedidos</li>
+    </ul>
+  </div>
+  <div class="card login-card">
+    <h2>Acesse sua conta</h2>
+    <p id="ltxt">Entre com sua matrícula e senha.</p>
+    <div id="nwrap" class="hide"><label for="nom">Nome completo</label><input id="nom" autocomplete="name"></div>
+    <label for="mat">Matrícula</label>
+    <input id="mat" autocomplete="username" placeholder="Ex.: 2024001">
+    <label for="sen">Senha</label>
+    <input id="sen" type="password" placeholder="Mínimo 4 caracteres" autocomplete="current-password">
+    <button class="full" id="entrar">Entrar</button>
+    <button class="sec full" id="troca">Criar conta de aluno</button>
+    <div id="lerr" class="msg err hide"></div>
+  </div>
+</section>
+
+<section id="app" class="hide">
+  <header class="welcome">
+    <div><span class="mut" id="mnum"></span><h1>Olá, <span id="nome"></span></h1></div>
+    <button class="sec" id="sair">Sair</button>
+  </header>
+  <nav id="nav">
+    <button data-v="pedido" class="on">Novo pedido</button>
+    <button data-v="hist">Meus pedidos</button>
+  </nav>
+
+  <div id="v-pedido" class="card">
+    <h2>Novo pedido</h2>
+    <div class="opts">
+      <div class="opt on" data-t="Sair da escola">🚪 Sair<small>Sair antes do fim</small></div>
+      <div class="opt" data-t="Sair e voltar">🔄 Sair e voltar<small>Saio e retorno no mesmo dia</small></div>
+      <div class="opt" data-t="Ficar no contraturno">📚 Ficar<small>Permanecer no contraturno</small></div>
+    </div>
+    <label for="data">Data</label><input id="data" type="date">
+    <div id="hwrap"><label for="hora">Horário de saída</label><input id="hora" type="time"></div>
+    <div id="rwrap" class="hide"><label for="hret">Horário de retorno</label><input id="hret" type="time"></div>
+    <label for="mot">Motivo</label><select id="mot"></select>
+    <label for="resp">Responsável que autoriza</label><input id="resp" placeholder="Nome do responsável">
+    <label for="obs">Observações (opcional)</label><textarea id="obs" rows="2"></textarea>
+    <button class="full" id="enviar">Enviar pedido</button>
+    <div id="perr" class="msg hide"></div>
+  </div>
+
+  <div id="v-hist" class="card hide">
+    <div class="row"><h2 id="htit">Meus pedidos</h2>
+      <select id="filtro" class="hide" style="width:auto"><option value="Pendente">Pendentes</option><option value="">Todos</option></select></div>
+    <div id="lista"></div>
+  </div>
+</section>
+</div>
+
+<footer>Projeto escolar · Saída Fácil</footer>
+<script src="script.js"></script>
+</body>
+</html>
